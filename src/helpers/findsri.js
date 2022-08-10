@@ -6,7 +6,10 @@ const WS = process.env.WS;
  const consultanip = async (nip) => {
     const header = randomUseragent.getRandom();
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox']
+     });
 
     const page = await browser.newPage();
 
