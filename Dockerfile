@@ -1,4 +1,8 @@
-FROM node:16-alpine
+FROM node:16
+
+RUN apt-get update
+
+RUN apt-get install libnss3 libxss1 libasound2 libatk-bridge2.0-0 libgtk-3-0 libgbm-dev -y
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
