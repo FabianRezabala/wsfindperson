@@ -22,7 +22,7 @@ const findnip = async (req, res) =>{
         }        
         
     }
-
+    delete persona.idpersona
     res.json(persona);
 }
 
