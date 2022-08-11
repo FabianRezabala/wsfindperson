@@ -10,7 +10,7 @@ const findnip = async (req, res) =>{
     if(persona === undefined || Object.entries(persona).length === 0 ){
         data = await consultanip(req.params.nip);
 
-        if (data && data.hasOwnProperty("contribuyente") && data.contibuyente.hasOwnProperty("nombreComercial")){
+        if (data && data.hasOwnProperty("contribuyente") && data.contribuyente.hasOwnProperty("nombreComercial")){
             persona = {
                 razonsocial: data.contribuyente.nombreComercial,
                 tipoIdentificacion: data.contribuyente.tipoIdentificacion,
